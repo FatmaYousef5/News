@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "uIcy9Y7kI48tlpH5iIUUxT3EEmUMFGOj4NgsLNxvS68=",
+  "Source": "NewsAPI",
+  "BasePath": "_content/NewsAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NewsAPI\\wwwroot",
+      "Source": "NewsAPI",
+      "ContentRoot": "G:\\News Task\\NewsAPI\\wwwroot\\",
+      "BasePath": "_content/NewsAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "G:\\News Task\\NewsAPI\\wwwroot\\UserImg\\F0R9C.jpg",
+      "SourceId": "NewsAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\News Task\\NewsAPI\\wwwroot\\",
+      "BasePath": "_content/NewsAPI",
+      "RelativePath": "UserImg/F0R9C.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImg\\F0R9C.jpg"
+    },
+    {
+      "Identity": "G:\\News Task\\NewsAPI\\wwwroot\\UserImg\\VSKRT.jpg",
+      "SourceId": "NewsAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\News Task\\NewsAPI\\wwwroot\\",
+      "BasePath": "_content/NewsAPI",
+      "RelativePath": "UserImg/VSKRT.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UserImg\\VSKRT.jpg"
+    }
+  ]
+}

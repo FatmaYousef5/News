@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\News Task\\NewsAPI\\wwwroot\\UserImg\\F0R9C.jpg",
+      "PackagePath": "staticwebassets\\UserImg\\F0R9C.jpg"
+    },
+    {
+      "Id": "G:\\News Task\\NewsAPI\\wwwroot\\UserImg\\VSKRT.jpg",
+      "PackagePath": "staticwebassets\\UserImg\\VSKRT.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.NewsAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.NewsAPI.props",
+      "PackagePath": "build\\NewsAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.NewsAPI.props",
+      "PackagePath": "buildMultiTargeting\\NewsAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.NewsAPI.props",
+      "PackagePath": "buildTransitive\\NewsAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
