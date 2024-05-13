@@ -1,0 +1,44 @@
+<table class="table table-dark table-hover table-striped-columns">
+    <thead>
+        <tr>
+            <th colspan="8" scope="col" id="dashboard">News DashBoard</th>
+        </tr>
+    </thead>
+    <thead>
+        <tr>
+            <th scope="col">Publication Date</th>
+            <th scope="col">Creation Date</th>
+            <th scope="col">Title</th>
+            <th scope="col">Content</th>
+            <th scope="col">Image</th>
+            <th scope="col">Author</th>
+            <th scope="col">Section</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let news of News">
+            <th scope="row">{{news.publicationDate}}</th>
+            <td>{{news.creationDate}}</td>
+            <td>{{news.title}}</td>
+            <td>{{news.newsContent}}</td>
+            <td><img style="width: 100px; height: 80px;" src="data:image/png;base64,{{news.image}}"></td>
+            <td>{{news.name}}</td>
+            <td>{{news.sectionName}}</td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Actions
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item btn btn-secondary"
+                        [routerLink]="['/newsUpdate/',news.newsId]" style="background-color: rgb(4, 221, 221); color: white;">Update</a></li>
+                      <li><a class="dropdown-item" [routerLink]="['/newsDetails/',news.newsId]" style="background-color: rgb(4, 173, 4); color: white;" >Details</a></li>
+                      <li><a class="dropdown-item" (click)="OnDelete(news.newsId)" style="background-color: rgb(202, 8, 8); color: white;">Delete</a></li>
+                    </ul>
+                  </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button routerLink="/newsCreate" type="button" class="btn btn-primary">Add New News</button>

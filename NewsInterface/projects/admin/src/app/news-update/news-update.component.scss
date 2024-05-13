@@ -1,0 +1,43 @@
+#label-parent {
+    position: absolute;
+    top: 20%;
+    left: 21%;
+    transform: translate(-50% -50%);
+}
+
+#addlog-btn {
+    border: none;
+}
+
+#cancel-btn {
+    border: none;
+}
+
+#floatingInputGrid {
+    background-color: rgb(48, 99, 126);
+    border: none;
+    color: rgb(104, 255, 255);
+}
+
+#list {
+    background-color: rgb(48, 99, 126);
+    border: none;
+    border-radius: 2px;
+    color: rgb(104, 255, 255);
+}
+
+#list-btn {
+    background-color: rgb(48, 99, 126);
+    border: none;
+    color: rgb(104, 255, 255);
+}
+
+#validation {
+    position: fixed;
+    font-weight: 600;
+    color: rgb(255, 15, 15);
+}
+
+::placeholder {
+    color: rgb(104, 255, 255);
+}

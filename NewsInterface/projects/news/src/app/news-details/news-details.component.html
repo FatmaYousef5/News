@@ -1,0 +1,10 @@
+<div class="container mt-3" *ngFor="let news of News">
+    <h1 id="header" class="d-flex justify-content-center">{{news.title}}</h1>
+    <div class="d-flex justify-content-center">
+        <img style="width: 850px; height: 350px;" alt="..." src="data:image/jpeg;charset=utf-8;base64,{{news?.image}}">
+    </div>
+
+    <h5 class="d-flex justify-content-center">{{news.newsContent}}</h5>
+    <h5 class="d-flex justify-content-end">{{news.creationDate}}</h5>
+    <h5 class="d-flex justify-content-end">{{news.name}}</h5>
+</div>

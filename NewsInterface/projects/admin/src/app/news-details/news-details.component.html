@@ -1,0 +1,47 @@
+<table class="table table-dark table-hover table-striped-columns mt-5">
+    <td *ngFor="let news of news">
+        <tr>
+            <th>Id : {{news?.newsId}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Publication Date: {{news?.publicationDate}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Creation Date: {{news?.creationDate}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>News Content: {{news?.newsContent}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Title: {{news?.title}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Image: <img style="width: 100px; height: 80px;" src="data:image/png;base64,{{news?.image}}"></th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Author: {{news?.name}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Section: {{news?.sectionName}}</th>
+        </tr>
+        <br>
+    </td>
+
+</table>
+<div class="row ms-5">
+    <button routerLink="/news" id="cancel-btn" class="btn btn-danger col-4 mt-5">Cancel</button>
+</div>

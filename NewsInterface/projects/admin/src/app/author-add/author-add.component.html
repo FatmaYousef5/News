@@ -1,0 +1,51 @@
+<div>
+    <div id="label-parent">
+        <div class="row mb-3">
+            <div class="row mb-4">
+                <div class="col-8">
+                    <div>
+                        <input [(ngModel)]="model.name" ngModel required minlength="3" type="text" class="form-control"
+                            id="floatingInputGrid" placeholder="Full Name" [ngModelOptions]="{standalone: true}"
+                            #name="ngModel">
+                        <div id="validation" *ngIf="name.invalid && (name.dirty || name.touched)">
+                            <div *ngIf="name.errors?.['required']">Name is required.</div>
+                            <div *ngIf="name.errors?.['minlength']">Name must be at least 3
+                                characters long.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-8">
+                    <div>
+                        <input [(ngModel)]="model.address" type="text" class="form-control" id="floatingInputGrid"
+                            placeholder="Address" [ngModelOptions]="{standalone: true}" required #address="ngModel">
+                        <div id="validation" *ngIf="name.invalid && (address.dirty || address.touched)">
+                            <div *ngIf="address.errors?.['required']">Address is required.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row mb-4">
+                    <div class="col-8">
+                        <div>
+                            <input [(ngModel)]="model.phone" type="text" class="form-control" id="floatingInputGrid"
+                                placeholder="Phone" [ngModelOptions]="{standalone: true}" required #phone="ngModel">
+                                <div id="validation" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                                    <div *ngIf="phone.errors?.['required']">Phone is required.</div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-2 mb-4">
+                    <div>
+                        <button (click)="getAddAuthor()" id="addlog-btn" class="btn btn-primary col-7">Add</button>
+                    </div>
+                </div>
+                <div class="row ms-5">
+                    <button routerLink="/admin" id="cancel-btn" class="btn btn-danger col-6">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>

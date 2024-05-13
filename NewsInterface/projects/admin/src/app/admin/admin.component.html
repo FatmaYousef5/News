@@ -1,0 +1,28 @@
+<table class="table table-dark table-hover table-striped-columns">
+    <thead>
+        <tr>
+            <th colspan="5" scope="col" id="dashboard">Authors DashBoard</th>
+        </tr>
+    </thead>
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let author of Author">
+                <th scope="row" >{{author.name}}</th>
+                <td>{{author.address}}</td>
+                <td>{{author.phone}}</td>
+                <td>
+                    <button type="button" class="btn btn-secondary" [routerLink]="['/authorUpdate/',author.authorId]">Update</button>
+                    <button type="button" class="btn btn-success" [routerLink]="['/authorDetail/',author.authorId]">Details</button>
+                    <button type="button" class="btn btn-danger" (click)="OnDelete(author.authorId)">Delete</button>
+                </td>
+            </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-primary" [routerLink]="['/authorCreate']">Add New Author</button>

@@ -1,0 +1,42 @@
+<div *ngFor="let author of author">
+    <form #form="ngForm" (ngSubmit)="UpdateAuthor(author.authorId)">
+    <div id="label-parent">
+        <div class="row mb-3">
+            <div class="row mb-4">
+                <div class="col-8">
+                    <div>
+                        <input type="text" class="form-control name"
+                            id="floatingInputGrid" placeholder="Full Name" value="{{author?.name}}">
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-8">
+                    <div>
+                        <input type="text" class="form-control address" id="floatingInputGrid"
+                            placeholder="Address" value="{{author?.address}}">
+                    </div>
+                </div>
+            </div>
+                <div class="row mb-4">
+                    <div class="col-8">
+                        <div>
+                            <input type="text" class="form-control phone" id="floatingInputGrid"
+                                placeholder="Phone" value="{{author?.phone}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row ms-2 mb-4">
+                    <div>
+                        <button id="addlog-btn" class="btn btn-primary col-7" >Update</button>
+                    </div>
+                </div>
+                <div class="row ms-5">
+                    <button routerLink="/admin" id="cancel-btn" class="btn btn-danger col-6">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    <router-outlet></router-outlet>
+

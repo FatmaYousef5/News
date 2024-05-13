@@ -1,0 +1,25 @@
+<table class="table table-dark table-hover table-striped-columns mt-5">
+    <td *ngFor="let author of author">
+        <tr>
+            <th scope="row" style="text-align: center;">Full Name :{{author?.name}}</th>
+        </tr>
+        <br>
+        <tr>
+            <th>Id :{{author?.authorId}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Address: {{author?.address}}</th>
+        </tr>
+        <br>
+
+        <tr>
+            <th>Phone: {{author?.phone}}</th>
+        </tr>
+    </td>
+        
+</table>
+<div class="row ms-5">
+    <button routerLink="/admin" id="cancel-btn" class="btn btn-danger col-4">Cancel</button>
+</div>

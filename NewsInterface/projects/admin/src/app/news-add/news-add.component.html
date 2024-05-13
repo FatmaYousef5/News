@@ -1,0 +1,87 @@
+<div>
+    <div id="label-parent">
+        <div class="row">
+            <div class="col-7">
+                <div class="row mb-4">
+                    <div>
+                        <input [(ngModel)]="model.CreationDate" ngModel required type="date" class="form-control"
+                            id="floatingInputGrid" placeholder="Creation Date" [ngModelOptions]="{standalone: true}"
+                            #CreationDate="ngModel">
+                        <div id="validation"
+                            *ngIf="CreationDate.invalid && (CreationDate.dirty || CreationDate.touched)">
+                            <div *ngIf="CreationDate.errors?.['required']">Creation Date is required.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row mb-4">
+                    <div>
+                        <textarea [(ngModel)]="model.NewsContent" type="text" class="form-control"
+                            id="floatingInputGrid" placeholder="News Content......"
+                            [ngModelOptions]="{standalone: true}" required #NewsContent="ngModel"></textarea>
+                        <div id="validation" *ngIf="NewsContent.invalid && (NewsContent.dirty || NewsContent.touched)">
+                            <div *ngIf="NewsContent.errors?.['required']">Content is required.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row mb-4">
+                    <div>
+                        <input [(ngModel)]="model.title" type="text" class="form-control"
+                            id="floatingInputGrid" placeholder="Title"
+                            [ngModelOptions]="{standalone: true}" required #Title="ngModel">
+                        <div id="validation" *ngIf="Title.invalid && (Title.dirty || Title.touched)">
+                            <div *ngIf="Title.errors?.['required']">Title is required.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row mb-4">
+                    <select id="list-btn" class="form-select id" aria-label="Default select example">
+                        <option selected value="0">Select Author</option>
+                        <option *ngFor="let author of Authors" value="{{author?.authorId}}">{{author.name}}
+                        </option>
+                      </select>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row mb-4">
+                    <select id="list-btn" class="form-select sectionId" aria-label="Default select example">
+                        <option selected value="0">Select Section</option>
+                        <option *ngFor="let section of Sections" value="{{section?.sectionID}}">{{section.sectionName}}
+                        </option>
+                      </select>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="row mb-4">
+                    <div>
+                        <input [(ngModel)]="model.Image" [ngModelOptions]="{standalone: true}" #image="ngModel"
+                            (change)="onFileSelected($event)" type="file" class="form-control" id="floatingInputGrid"
+                            placeholder="Choose Image" multiple required>
+                        <div id="validation" *ngIf="image.invalid && (image.dirty || image.touched)">
+                            <div *ngIf="image.errors?.['required']">Image is required.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row ms-5 mb-4">
+                    <button (click)="getAddNews()" id="addlog-btn" class="btn btn-primary col-6">Add</button>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row ms-5">
+                    <button routerLink="/news" id="cancel-btn" class="btn btn-danger col-6">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<div id="container" class="container">
+    <div class="row">
+        <div class="col-4 mb-3" *ngFor="let news of model">
+            <div class="card d-flex align-items-baseline" style="width: 18rem;">
+                <img style="height: 200px;" class="card-img-top" alt="..."
+                    src="data:image/png;base64,{{news?.image}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{news.title}}</h5>
+                    <a [routerLink]="['/newsDetail/',news.newsId]" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

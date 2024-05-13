@@ -1,0 +1,79 @@
+<div *ngFor="let news of news">
+    <form #form="ngForm" (ngSubmit)="getUpdateNews()">
+        <div id="label-parent">
+            <div class="row">
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <div>
+                            <input type="datetime" class="form-control publicationDate" id="floatingInputGrid"
+                                placeholder="Publication Date" value="{{news?.publicationDate}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <div>
+                            <input type="datetime" class="form-control creationDate" id="floatingInputGrid"
+                                placeholder="Creation Date" value="{{news?.creationDate}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <div>
+                            <input type="text" class="form-control title" id="floatingInputGrid"
+                                placeholder="Title" value="{{news?.title}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <div>
+                            <textarea type="text" class="form-control newsContent" id="floatingInputGrid"
+                                placeholder="News Content......">{{news?.newsContent}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <select id="list-btn" class="form-select authorId" aria-label="Default select example">
+                            <option selected value="{{news?.authorId}}">{{news?.name}}</option>
+                            <option *ngFor="let author of Authors" value="{{author?.authorId}}">{{author.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <select id="list-btn" class="form-select sectionId" aria-label="Default select example">
+                            <option selected value="{{news?.section}}">{{news?.sectionName}}</option>
+                            <option *ngFor="let section of Sections" value="{{section?.sectionID}}">{{section.sectionName}}
+                            </option>
+                          </select>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row mb-4">
+                        <div>
+                            <input (change)="onFileSelected($event)" type="file" class="form-control"
+                                id="floatingInputGrid" placeholder="Choose Image" multiple>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row ms-5 mb-4">
+                        <button id="addlog-btn" class="btn btn-primary col-6">Update</button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row ms-5">
+                        <button routerLink="/news" id="cancel-btn" class="btn btn-danger col-6">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<router-outlet></router-outlet>

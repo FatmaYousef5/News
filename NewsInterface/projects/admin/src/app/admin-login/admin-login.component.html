@@ -1,0 +1,26 @@
+    <div id="logo">
+      <div id="label-parent">
+        <div class="row mb-3">
+          <div class="row mb-4">
+            <div class="col-12">
+              <div>
+                <input [(ngModel)]="model.UserName" type="text" class="form-control" id="floatingInputGrid" placeholder="UserName" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div>
+                <input [(ngModel)]="model.Password" type="password" class="form-control" id="floatingInputGrid" placeholder="******" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 ms-4">
+          <div class="row">
+            <button (click)="getLogin()" id="log-btn" class="btn btn-primary">Log In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <router-outlet></router-outlet>
